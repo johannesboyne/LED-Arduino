@@ -19,12 +19,41 @@ void loop() {
   delay(500);
 
   
-  for (int8_t x=7; x>=-36; x--) {
-    matrix.setRotation(x%2);
+  for (int8_t x=4; x>=0; x--) {
+    matrix.setRotation(x);
     matrix.clear();      // clear display
-    matrix.drawTriangle(x,x,x+7,x+8,x,x+8, LED_YELLOW);
+    matrix.drawTriangle(0,7,4,4,7,7, LED_YELLOW);
     matrix.writeDisplay();  // write the changes we just made to the display
-    delay(100);
+    delay(200);
+
+    matrix.clear();
+    matrix.fillTriangle(0,7,4,4,7,7, LED_RED);
+    matrix.writeDisplay();  // write the changes we just made to the display
+    delay(200);
   }
-  matrix.setRotation(0);
 }
+
+/*
+     0  1  2  3  4  5  6  7
+  0 [ ][ ][ ][ ][ ][ ][ ][ ]
+  1 [ ][ ][ ][ ][ ][ ][ ][ ]
+  2 [ ][ ][ ][ ][ ][ ][ ][ ]
+  3 [ ][ ][ ][ ][ ][ ][ ][ ]
+  4 [ ][ ][ ][x][x][ ][ ][ ]
+  5 [ ][ ][x][ ][ ][x][ ][ ]
+  6 [ ][x][ ][ ][ ][ ][x][ ]
+  7 [x][x][x][x][x][x][x][x]
+
+     0  1  2  3  4  5  6  7
+  0 [ ][ ][ ][ ][ ][ ][ ][ ]
+  1 [ ][ ][ ][ ][ ][ ][ ][ ]
+  2 [ ][ ][ ][ ][ ][ ][ ][ ]
+  3 [ ][ ][ ][ ][ ][ ][ ][ ]
+  4 [ ][ ][ ][x][x][ ][ ][ ]
+  5 [ ][ ][x][ ][ ][x][ ][ ]
+  6 [ ][x][ ][ ][ ][ ][x][ ]
+  7 [x][x][x][x][x][x][x][x]
+
+
+
+*/
