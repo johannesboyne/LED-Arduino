@@ -71,7 +71,7 @@ void loop() {
     matrix.setCursor(x,0);
     matrix.print("Hi Mr. Wegge");
     matrix.writeDisplay();
-    delay(100);
+    delay(700);
   }
   matrix.setRotation(3);
   matrix.setTextColor(LED_RED);
@@ -80,7 +80,7 @@ void loop() {
     matrix.setCursor(x,0);
     matrix.print("This comes from Mr. Boyne");
     matrix.writeDisplay();
-    delay(100);
+    delay(700);
   }
   matrix.setRotation(0);
 }
