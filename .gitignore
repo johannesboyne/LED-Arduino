@@ -1,2 +1,4 @@
 Arduino
 *.log
+*.DS_Store
+Arduino.app/
